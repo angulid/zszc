@@ -6,6 +6,7 @@ import json
 
 from common import tool
 from company.company_run import CompanyRun
+from gongcheng.gc_run import GcRun
 from gov.create_pro_gov import CreatePro
 from gov.gov_run import GovRun
 
@@ -33,6 +34,7 @@ def get_vlues():
     notice_add = args.get('notice_add')
     notice_approve = args.get('notice_approve')
     bid_num = int(args.get('bid_num'))
+    sxf = args.get('sxf')
     tbr = ['tbr1', 'tbr2', 'tbr3']
     tbr_single = ['tbr1']
 
@@ -63,7 +65,8 @@ def get_vlues():
         'file_add':file_add,
         'file_approve': file_approve,
         'notice_add':notice_add,
-        'notice_approve': notice_approve
+        'notice_approve': notice_approve,
+        'sxf':sxf
     }
     pprint(pro_info)
     if pro_type == '企业':
@@ -72,6 +75,10 @@ def get_vlues():
     elif pro_type == '政府':
         gr = GovRun(pro_info)
         gr.govment_pro()
+    elif pro_type == '工程':
+        gcr = GcRun(pro_info)
+        gcr.gc_pro()
+
     return 'ok'
 
 if __name__ == '__main__':

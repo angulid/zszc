@@ -18,7 +18,7 @@ def get_time():
     date_now = datetime.time(hour, minute, second)
     data_tomorrow = date_today + datetime.timedelta(days=1)
     data_20 = date_today + datetime.timedelta(days=40)
-    data_5_min = (datetime.datetime.now() + datetime.timedelta(minutes=5)).strftime("%Y-%m-%d %H:%M:%S")
+    data_5_min = (datetime.datetime.now() + datetime.timedelta(minutes=7)).strftime("%Y-%m-%d %H:%M:%S")
     data_10_min = (datetime.datetime.now() + datetime.timedelta(minutes=10)).strftime("%Y-%m-%d %H:%M:%S")
     time_date = {
         'date_today':str(date_today),

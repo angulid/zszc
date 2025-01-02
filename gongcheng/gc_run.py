@@ -1,5 +1,5 @@
 from common import tool
-from create_pro_gc import CreateProGc
+from gongcheng.create_pro_gc import CreateProGc
 
 class GcRun:
 
@@ -13,6 +13,8 @@ class GcRun:
         self.notice_add = gov_pro['notice_add']
         self.notice_approve = gov_pro['notice_approve']
         self.pb_method = gov_pro['pb_method']
+        if gov_pro['sxf'] == 'on':
+            self.gov_pro['sxf'] = 1
 
     def gc_pro(self):
         if self.pro_add == 'on':
@@ -21,14 +23,9 @@ class GcRun:
             self.cpg.gc_pro_create(self.gov_pro)
         if self.pro_approve == 'on':
             self.cpg.approve(self.gov_pro)
-
         if self.file_add == 'on':
-            if self.pb_method == '综合评分法':
+            if self.pb_method == '综合评估法':
                 self.cpg.pro_add_buy_file_zonghe(self.gov_pro)
-            elif self.pb_method == '最低评标价法':
-                self.cpg.pro_add_buy_file_lowest_pingbiao(self.gov_pro)
-            elif self.pb_method == '最低投标价法':
-                self.cpg.pro_add_buy_file_lowest_toubiao_reject(self.gov_pro)
             else:
                 print('没有这个评标办法')
         if self.file_approve == 'on':
