@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>辅助测试脚本</title>
+</head>
+<body>
+    <form name="submit_form" action="http://127.0.0.1:5000/get_vlues" method="post">
+        <h1 align="center">请选择创建项目</h1>
+        <table width="20%" align="center" border="0" cellspacing="10">
+            <tr>
+                <td>选择系统:</td>
+                <td>
+                    <select name="sys" style="width:175px;" >
+                        <option value="沙河" align="center">沙河</option>
+                        <option value="清苑" align="center">清苑</option>
+                        <option value="六安" align="center">六安</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>项目类型:</td>
+                <td>
+                    <select name="pro_type" style="width:175px;">
+                        <option value="企业" align="center">企业</option>
+                        <option value="政府" align="center">政府</option>
+                        <option value="工程" align="center">工程</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>项目名称:</td>
+                <td>
+                    <input  type="text" name="pro_name" value="">
+                </td>
+            </tr>
+            <tr>
+                <td>采购类型:</td>
+                <td>
+                    <select name="cg_type" style="width:175px;">
+                        <option value="公开招标" align="center">公开招标</option>
+                        <option value="邀请招标" align="center">邀请招标</option>
+                        <option value="单一来源采购" align="center">单一来源采购</option>
+                        <option value="竞争性谈判" align="center">竞争性谈判</option>
+                        <option value="竞争性磋商" align="center">竞争性磋商</option>
+                        <option value="询价" align="center">询价</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>评标方法:</td>
+                <td>
+                    <select name="pb_method" style="width:175px;">
+                        <option value="综合评分法" align="center">综合评分法</option>
+                        <option value="最低投标价法" align="center">最低投标价法</option>
+                        <option value="最低评标价法" align="center">最低评标价法</option>
+                        <option value="最低评分法" align="center">最低评分法</option>
+                        <option value="综合评估法" align="center">综合评估法</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>采购文件:</td>
+                <td>
+                    <input  type="text" name="file" value="F:\上传文件\测试-招标文件.pdf">
+                </td>
+            </tr>
+            <tr>
+                <td>交易中心:</td>
+                <td>
+                    <input  type="text" name="jyzx" value="河北省公共资源交易中心">
+                </td>
+            </tr>
+            <tr>
+                <td>主持人:</td>
+                <td>
+                    <input  type="text" name="zcr" value="招标人AAA">
+                </td>
+            </tr>
+            <tr>
+                <td>标段数量:</td>
+                <td>
+                    <input  type="text" name="bid_num" value="1">
+                </td>
+            </tr>
+            <tr>
+                <td>标段行业:</td>
+                <td>
+                    <input  type="text" name="bdhy" value="工程类 / 规划 / 国民经济和社会发展规划 / 总体规划">
+                </td>
+            </tr>
+            <tr>
+                <td>流程步骤:</td>
+                <td>
+                    <div><input type="checkbox" name="pro_add"  checked>创建项目
+                        <input type="checkbox" name="pro_approve"  checked>审批</div>
+                    <div><input type="checkbox" name="file_add"  checked>招标文件
+                        <input type="checkbox" name="file_approve"  checked>审批</div>
+                    <div><input type="checkbox" name="notice_add"  checked>创建公示
+                        <input type="checkbox" name="notice_approve"  checked>审批</div>
+                </td>
+            </tr>
+            <tr>
+                <td>工程项目:</td>
+                <td>
+                    <input type="checkbox" name="file_add">双信封
+                </td>
+            </tr>
+            <tr>
+                <td>提交:</td>
+                <td>
+                    <input type="submit" value="创建">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
